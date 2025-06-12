@@ -1,0 +1,64 @@
+
+> vite@0.0.0 dev
+> vite dev --host 0.0.0.0 --port 3000
+
+
+  VITE v6.2.5  ready in 248 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://172.17.0.2:3000/
+9:12:33 AM [vite] (client) Pre-transform error: Failed to resolve import "./profile.js" from "src/ui/appShell.js". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/src/ui/appShell.js:8:38
+  6  |  import { renderOrdersScreen } from './orders.js';
+  7  |  import { renderCartScreen } from './cart.js';
+  8  |  import { renderProfileScreen } from './profile.js';
+     |                                       ^
+  9  |  
+  10 |  const TABS = [
+9:12:33 AM [vite] (client) Pre-transform error: Failed to resolve import "./ratings.js" from "src/ui/restaurantMenu.js". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/src/ui/restaurantMenu.js:2:38
+  1  |  import { addToCart } from '../utils/cartStore.js';
+  2  |  import { renderRatingsScreen } from './ratings.js';
+     |                                       ^
+  3  |  import { renderHomeScreen } from './home.js';
+  4  |  
+9:12:34 AM [vite] Internal server error: Failed to resolve import "./profile.js" from "src/ui/appShell.js". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/src/ui/appShell.js:8:38
+  6  |  import { renderOrdersScreen } from './orders.js';
+  7  |  import { renderCartScreen } from './cart.js';
+  8  |  import { renderProfileScreen } from './profile.js';
+     |                                       ^
+  9  |  
+  10 |  const TABS = [
+      at TransformPluginContext._formatLog (file:///home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47885:41)
+      at TransformPluginContext.error (file:///home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47882:16)
+      at normalizeUrl (file:///home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:46015:23)
+      at async file:///home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:46134:37
+      at async Promise.all (index 3)
+      at async TransformPluginContext.transform (file:///home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:46061:7)
+      at async EnvironmentPluginContainer.transform (file:///home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47680:18)
+      at async loadAndTransform (file:///home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:41327:27)
+      at async viteTransformMiddleware (file:///home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:42807:24)
+9:12:34 AM [vite] Internal server error: Failed to resolve import "./profile.js" from "src/ui/appShell.js". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/src/ui/appShell.js:8:38
+  6  |  import { renderOrdersScreen } from './orders.js';
+  7  |  import { renderCartScreen } from './cart.js';
+  8  |  import { renderProfileScreen } from './profile.js';
+     |                                       ^
+  9  |  
+  10 |  const TABS = [
+      at TransformPluginContext._formatLog (file:///home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47885:41)
+      at TransformPluginContext.error (file:///home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47882:16)
+      at normalizeUrl (file:///home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:46015:23)
+      at async file:///home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:46134:37
+      at async Promise.all (index 3)
+      at async TransformPluginContext.transform (file:///home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:46061:7)
+      at async EnvironmentPluginContainer.transform (file:///home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:47680:18)
+      at async loadAndTransform (file:///home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:41327:27)
+      at async viteTransformMiddleware (file:///home/kavia/workspace/code-generation/quickeats-48361-37a6956c/quickeats_frontend/node_modules/vite/dist/node/chunks/dep-Pj_jxEzN.js:42807:24)
+9:12:34 AM [vite] (client) page reload src/ui/profile.js
+9:13:13 AM [vite] (client) hmr update /src/style.css

@@ -1,0 +1,394 @@
+:root {
+  --qe-primary: #FF5722;
+  --qe-secondary: #FFFFFF;
+  --qe-accent: #4CAF50;
+  --qe-bg: #FAFAFA;
+  --qe-card: #FFF;
+  --qe-border: #E0E0E0;
+  --qe-text: #222;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body, #app {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--qe-bg);
+  color: var(--qe-text);
+}
+
+.qe-theme-light {
+  background: var(--qe-bg);
+  color: var(--qe-text);
+}
+
+#qe-main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 420px;
+  margin: 0 auto;
+  background: var(--qe-bg);
+  box-shadow: 0 2px 10px 0 #0001;
+}
+
+#qe-content {
+  flex: 1;
+  padding-bottom: 70px;
+}
+
+nav#qe-bottom-nav {
+  border-top: 1px solid var(--qe-border);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  max-width: 420px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--qe-secondary);
+  height: 62px;
+  z-index: 10;
+}
+
+.qe-nav-btn {
+  flex: 1;
+  border: none;
+  background: none;
+  color: var(--qe-text);
+  font-size: 1em;
+  padding: 0.5em 0 0.1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: color .2s;
+  outline: none;
+}
+.qe-nav-btn.qe-active {
+  color: var(--qe-primary);
+}
+.qe-nav-icon { font-size: 1.5em; }
+.qe-nav-label { font-size: 0.8em; margin-top: 1px; }
+
+.qe-header, .qe-back-header {
+  padding: 1em;
+  border-bottom: 1px solid var(--qe-border);
+  background: var(--qe-secondary);
+  font-weight: bold;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  column-gap: 0.75em;
+}
+.qe-back-header button {
+  border: none;
+  background: none;
+  color: var(--qe-primary);
+  font-size: 1em;
+  cursor: pointer;
+  padding: 0 0.3em 0 0;
+}
+.qe-menu-review-btn {
+  margin-left: auto;
+  background: var(--qe-accent);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 0 1em;
+}
+
+.qe-search-bar {
+  padding: 1em;
+  text-align: center;
+}
+.qe-search-bar input {
+  width: 96%;
+  padding: 0.7em 1em;
+  border-radius: 30px;
+  border: 1px solid var(--qe-border);
+  font-size: 1em;
+  outline: none;
+}
+
+.qe-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1em;
+  margin: 1em 0;
+  padding: 0 1em;
+  scroll-snap-type: x mandatory;
+}
+.qe-carousel-item {
+  min-width: 240px;
+  max-width: 320px;
+  background: var(--qe-card);
+  border-radius: 18px;
+  box-shadow: 0 2px 10px #0002;
+  margin-bottom: 0.2em;
+  overflow: hidden;
+  scroll-snap-align: start;
+  position: relative;
+}
+.qe-carousel-item img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+}
+.qe-carousel-caption {
+  padding: 0.7em 1em 0.7em 1em;
+  font-size: 1em;
+  color: var(--qe-primary);
+  background: #fff9;
+  position: relative;
+  z-index: 2;
+}
+
+.qe-rest-list {
+  padding: 0 1em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+.qe-rest-card {
+  background: var(--qe-card);
+  box-shadow: 0 2px 8px #0001;
+  border-radius: 13px;
+  padding: 1em 1em 0.8em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border .17s;
+}
+.qe-rest-card:hover {
+  border-color: var(--qe-primary);
+}
+.qe-rest-title { font-weight: bold; font-size: 1.1em; }
+.qe-rest-meta { font-size: .92em; color: #888; }
+.qe-rest-rating { background: var(--qe-primary); color: #fff; font-size: 0.95em; border-radius: 10px; padding: 0.2em 0.68em; }
+
+.qe-menu-title {
+  font-weight: bold;
+  font-size: 1em;
+  flex: 2;
+  text-align: center;
+}
+.qe-menu-list {
+  padding: 1em;
+}
+.qe-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .24em;
+  background: var(--qe-card);
+  padding: 1em;
+  border-radius: 9px;
+  margin-bottom: .8em;
+  box-shadow: 0 1px 5px #0001;
+}
+.qe-menu-name { font-weight: bold; }
+.qe-menu-price { color: var(--qe-primary); padding-left: 0.3em; }
+.qe-menu-desc { color: #666; font-size: 0.97em }
+.qe-menu-add-btn {
+  margin-top: .25em;
+  background: var(--qe-accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.45em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.qe-orders-list {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.qe-order-card {
+  background: var(--qe-card);
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px #0001;
+  display: flex;
+  flex-direction: column;
+  gap: 0.37em;
+  border-left: 4px solid var(--qe-primary);
+}
+.qe-order-title { font-weight: bold; }
+.qe-order-status { color: var(--qe-accent); font-weight: 500; }
+.qe-order-time { color: #666; font-size: 0.94em}
+.qe-order-track-btn {
+  margin-top: .4em;
+  border: none;
+  border-radius: 8px;
+  background: var(--qe-primary);
+  color: #fff;
+  padding: .5em 1.3em;
+  cursor: pointer;
+  font-size: 1em;
+  align-self: flex-end;
+}
+
+.qe-cart-list {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65em;
+}
+.qe-cart-item {
+  background: var(--qe-card);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 8px #0001;
+  border-radius: 10px;
+  padding: .85em;
+}
+.qe-cart-remove-btn {
+  background: none;
+  border: none;
+  color: var(--qe-primary);
+  font-size: 1.1em;
+  cursor: pointer;
+}
+.qe-cart-actions {
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+  justify-content: flex-end;
+}
+.qe-cart-actions button {
+  background: var(--qe-primary);
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  padding: .65em 1.7em;
+  font-size: 1em;
+  margin-left: .2em;
+  cursor: pointer;
+  font-weight: 500;
+}
+.qe-cart-actions button[disabled] {
+  background: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.qe-empty {
+  text-align: center;
+  padding: 2em;
+  color: #999;
+  font-size: 1.15em;
+}
+
+.qe-profile-form, .qe-profile-info {
+  padding: 1.4em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.05em;
+  background: var(--qe-card);
+  margin: 1em;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px #0001;
+}
+.qe-profile-form input,
+.qe-profile-form input[type=password] {
+  padding: .7em 1em;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid var(--qe-border);
+  margin-bottom: .7em;
+}
+.qe-auth-btns {
+  display: flex;
+  gap: 1.1em;
+}
+
+.qe-ratings-list {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+
+.qe-rating-card {
+  background: var(--qe-card);
+  border-radius: 8px;
+  box-shadow: 0 1px 6px #0001;
+  padding: .8em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.17em;
+}
+.qe-rating-user {
+  font-weight: 500;
+}
+.qe-rating-stars {
+  color: gold;
+  font-size: 1.1em;
+}
+.qe-rating-text {
+  color: #555;
+  font-size: 0.98em;
+}
+
+.qe-rating-form {
+  margin: 1em;
+  padding: 1em;
+  background: var(--qe-card);
+  border-radius: 11px;
+  box-shadow: 0 1px 5px #0001;
+  display: flex;
+  flex-direction: column;
+  gap: .6em;
+}
+.qe-rating-form input, .qe-rating-form select, .qe-rating-form textarea {
+  border-radius: 8px;
+  border: 1px solid var(--qe-border);
+  padding: .55em 1em;
+  font-size: .97em;
+}
+.qe-rating-form button {
+  background: var(--qe-accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: .57em 0.6em;
+  font-size: .99em;
+  font-weight: 500;
+  margin-right: 0.4em;
+}
+.qe-rating-form button[type=button] {
+  background: #ee6e2d;
+}
+.qe-header {
+  justify-content: center;
+}
+
+.qe-order-track-wrap {
+  padding: 2em 0.5em 1.2em 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7em;
+}
+.qe-order-map { margin: 1em 0; }
+.qe-track-map-img { width: 300px; max-width: 95vw; border-radius: 14px; border: 1px solid #eee; }
+.qe-track-times {
+  font-size: 1.05em;
+  color: var(--qe-primary);
+  font-weight: 500;
+}
+
+@media (max-width: 520px) {
+  #qe-main-container, nav#qe-bottom-nav { max-width: 100vw; }
+  .qe-carousel-item { min-width: 64vw; }
+  .qe-header, .qe-back-header { font-size: 1em; }
+  .qe-menu-title { font-size: 0.97em; }
+}
